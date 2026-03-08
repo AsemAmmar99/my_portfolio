@@ -1,0 +1,62 @@
+name: portfolio
+description: "Asem El-Sayed Ammar — Senior Mobile Engineer Portfolio"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.4.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_bloc: ^8.1.6
+  bloc: ^8.1.4
+  equatable: ^2.0.5
+
+  # Dependency Injection
+  get_it: ^7.7.0
+  injectable: ^2.4.2
+
+  # Navigation
+  go_router: ^14.2.7
+
+  # HTTP & Networking (for future use)
+  dio: ^5.7.0
+
+  # Fonts
+  google_fonts: ^6.2.1
+
+  # Icons
+  font_awesome_flutter: ^10.7.0
+
+  # Animations
+  animated_text_kit: ^4.2.3
+
+  # Visibility / Scroll animations
+  visibility_detector: ^0.4.0+2
+
+  # URL Launcher (GitHub, LinkedIn, email)
+  url_launcher: ^6.3.0
+
+  # SVG support
+  flutter_svg: ^2.0.10+1
+
+  # Cupertino icons
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  injectable_generator: ^2.6.2
+  build_runner: ^2.4.12
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
