@@ -110,7 +110,7 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
           'custom responsive layouts, and Google Maps integration. '
           'Demonstrates enterprise-grade Flutter patterns.',
       techStack: ['Flutter', 'BLoC', 'GetIt', 'Dio', 'Sizer', 'Google Maps'],
-      githubUrl: 'https://github.com/AsemAmmar99/hotel_booking_app',
+      githubUrl: 'https://github.com/AsemAmmar99/Algoriza_Hotel_App_team_6',
       category: 'opensource',
       isFeatured: false,
     ),
