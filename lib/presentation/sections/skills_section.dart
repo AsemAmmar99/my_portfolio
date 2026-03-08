@@ -166,6 +166,13 @@ class _SkillBarState extends State<_SkillBar>
   late Animation<double> _widthAnim;
   bool _visible = false;
 
+  String _getProficiencyLabel(double proficiency) {
+    if (proficiency >= 0.90) return 'Expert';
+    if (proficiency >= 0.80) return 'Advanced';
+    if (proficiency >= 0.60) return 'Intermediate';
+    return 'Familiar';
+  }
+
   @override
   void initState() {
     super.initState();
@@ -207,9 +214,11 @@ class _SkillBarState extends State<_SkillBar>
               opacity: _visible ? 1.0 : 0.0,
               duration: AppDimensions.animNormal,
               child: Text(
-                '${(widget.skill.proficiency * 100).toInt()}%',
+                _getProficiencyLabel(widget.skill.proficiency),
                 style: Theme.of(context).textTheme.labelMedium?.copyWith(
                       color: widget.accentColor,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 0.5,
                     ),
               ),
             ),
