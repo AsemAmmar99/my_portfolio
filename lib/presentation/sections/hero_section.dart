@@ -101,7 +101,7 @@ class _HeroSectionState extends State<HeroSection>
                   gradient: RadialGradient(
                     colors: [
                       AppColors.primary
-                          .withOpacity(0.08 + _bgAnim.value * 0.04),
+                          .withValues(alpha: 0.08 + _bgAnim.value * 0.04),
                       Colors.transparent,
                     ],
                   ),
@@ -121,7 +121,7 @@ class _HeroSectionState extends State<HeroSection>
                 shape: BoxShape.circle,
                 gradient: RadialGradient(
                   colors: [
-                    AppColors.primaryDark.withOpacity(0.07),
+                    AppColors.primaryDark.withValues(alpha: 0.07),
                     Colors.transparent,
                   ],
                 ),
@@ -462,7 +462,7 @@ class _GridPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = AppColors.textPrimary.withOpacity(0.025)
+      ..color = AppColors.textPrimary.withValues(alpha: 0.025)
       ..strokeWidth = 1;
 
     const spacing = 32.0;
