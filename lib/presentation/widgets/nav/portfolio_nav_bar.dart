@@ -327,7 +327,7 @@ class _MobileMenuButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Icon(Icons.menu_rounded, color: AppColors.textPrimary),
+      icon: Icon(Icons.menu_rounded, color: Theme.of(context).colorScheme.onSurface),
       onPressed: () => _showMobileDrawer(context),
     );
   }
@@ -336,7 +336,7 @@ class _MobileMenuButton extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: AppColors.bgSecondary,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),

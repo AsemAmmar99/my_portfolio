@@ -206,7 +206,7 @@ class _SkillBarState extends State<_SkillBar>
             Text(
               widget.skill.name,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: AppColors.textPrimary,
+                    color: Theme.of(context).colorScheme.onSurface,
                     fontWeight: FontWeight.w500,
                   ),
             ),
@@ -230,7 +230,7 @@ class _SkillBarState extends State<_SkillBar>
             height: 6,
             width: constraints.maxWidth,
             decoration: BoxDecoration(
-              color: AppColors.bgBorder,
+              color: Theme.of(context).dividerColor,
               borderRadius: BorderRadius.circular(3),
             ),
             child: AnimatedBuilder(
