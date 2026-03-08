@@ -48,12 +48,14 @@ class _HeroSectionState extends State<HeroSection>
     final size = MediaQuery.of(context).size;
     final isMobile = ResponsiveLayout.isMobile(context);
 
-    return SizedBox(
-      height: size.height,
-      width: size.width,
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minHeight: size.height,
+        minWidth: size.width,
+      ),
       child: Stack(
         children: [
-          // â”€â”€ Animated Gradient Background â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+          // ── Animated Gradient Background ─────────────────────────────────
           AnimatedBuilder(
             animation: _bgAnim,
             builder: (_, __) {
@@ -85,7 +87,7 @@ class _HeroSectionState extends State<HeroSection>
             },
           ),
 
-          // â”€â”€ Glowing Orb (top right) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+          // ── Glowing Orb (top right) ───────────────────────────────────────
           Positioned(
             top: -100,
             right: -100,
@@ -108,7 +110,7 @@ class _HeroSectionState extends State<HeroSection>
             ),
           ),
 
-          // â”€â”€ Glowing Orb (bottom left) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+          // ── Glowing Orb (bottom left) ─────────────────────────────────────
           Positioned(
             bottom: -150,
             left: -100,
@@ -127,54 +129,62 @@ class _HeroSectionState extends State<HeroSection>
             ),
           ),
 
-          // â”€â”€ Grid Pattern Overlay â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+          // ── Grid Pattern Overlay ──────────────────────────────────────────
           Positioned.fill(
             child: CustomPaint(painter: _GridPainter()),
           ),
 
-          // â”€â”€ Main Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-          ContentWrapper(
+          // ── Main Content (Expandable) ─────────────────────────────────────
+          SafeArea(
             child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: 80), // Move content down slightly
-                  AnimatedSection(
-                    sectionId: 'hero-greeting',
-                    child: _buildGreeting(context),
+              child: ContentWrapper(
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    top: isMobile ? 48 : 0,
+                    bottom: 100, // Make sure there's room for the scroll indicator
                   ),
-                  const SizedBox(height: AppDimensions.md),
-                  AnimatedSection(
-                    sectionId: 'hero-name',
-                    delay: const Duration(milliseconds: 150),
-                    child: _buildName(context, isMobile),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 80),
+                      AnimatedSection(
+                        sectionId: 'hero-greeting',
+                        child: _buildGreeting(context),
+                      ),
+                      const SizedBox(height: AppDimensions.md),
+                      AnimatedSection(
+                        sectionId: 'hero-name',
+                        delay: const Duration(milliseconds: 150),
+                        child: _buildName(context, isMobile),
+                      ),
+                      const SizedBox(height: AppDimensions.md),
+                      AnimatedSection(
+                        sectionId: 'hero-title',
+                        delay: const Duration(milliseconds: 300),
+                        child: _buildAnimatedTitle(context, isMobile),
+                      ),
+                      const SizedBox(height: AppDimensions.xl),
+                      AnimatedSection(
+                        sectionId: 'hero-subtitle',
+                        delay: const Duration(milliseconds: 450),
+                        child: _buildSubtitle(context, isMobile),
+                      ),
+                      const SizedBox(height: AppDimensions.xxl),
+                      AnimatedSection(
+                        sectionId: 'hero-cta',
+                        delay: const Duration(milliseconds: 600),
+                        child: _buildCTAButtons(isMobile),
+                      ),
+                      const SizedBox(height: AppDimensions.xl),
+                      AnimatedSection(
+                        sectionId: 'hero-social',
+                        delay: const Duration(milliseconds: 750),
+                        child: _buildSocialLinks(),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: AppDimensions.md),
-                  AnimatedSection(
-                    sectionId: 'hero-title',
-                    delay: const Duration(milliseconds: 300),
-                    child: _buildAnimatedTitle(context, isMobile),
-                  ),
-                  const SizedBox(height: AppDimensions.xl),
-                  AnimatedSection(
-                    sectionId: 'hero-subtitle',
-                    delay: const Duration(milliseconds: 450),
-                    child: _buildSubtitle(context, isMobile),
-                  ),
-                  const SizedBox(height: AppDimensions.xxl),
-                  AnimatedSection(
-                    sectionId: 'hero-cta',
-                    delay: const Duration(milliseconds: 600),
-                    child: _buildCTAButtons(isMobile),
-                  ),
-                  const SizedBox(height: AppDimensions.xxl),
-                  AnimatedSection(
-                    sectionId: 'hero-social',
-                    delay: const Duration(milliseconds: 750),
-                    child: _buildSocialLinks(),
-                  ),
-                ],
+                ),
               ),
             ),
           ),

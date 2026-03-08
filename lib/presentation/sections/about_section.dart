@@ -74,7 +74,7 @@ class AboutSection extends StatelessWidget {
               border: Border.all(color: AppColors.glassBorder, width: 3),
               boxShadow: [
                 BoxShadow(
-                  color: AppColors.primary.withOpacity(0.3),
+                  color: AppColors.primary.withValues(alpha: 0.3),
                   blurRadius: 24,
                   offset: const Offset(0, 8),
                 ),
@@ -160,31 +160,59 @@ class AboutSection extends StatelessWidget {
         const SizedBox(height: AppDimensions.xl),
 
         // Stats row
-        Wrap(
-          spacing: AppDimensions.md,
-          runSpacing: AppDimensions.md,
-          children: const [
-            StatCard(
-              value: '4+',
-              label: 'Years\nExperience',
-              icon: Icons.calendar_today_rounded,
-            ),
-            StatCard(
-              value: '10+',
-              label: 'Apps\nShipped',
-              icon: Icons.rocket_launch_rounded,
-            ),
-            StatCard(
-              value: '5',
-              label: 'Companies\nWorked',
-              icon: Icons.business_rounded,
-            ),
-            StatCard(
-              value: '20+',
-              label: 'Open Source\nRepos',
-              icon: Icons.code_rounded,
-            ),
-          ],
+        LayoutBuilder(
+          builder: (context, constraints) {
+            final spacing = AppDimensions.md;
+            int crossCount = 4;
+            if (constraints.maxWidth < 400) {
+              crossCount = 2;
+            } else if (constraints.maxWidth < 600) {
+              crossCount = 2;
+            } else if (constraints.maxWidth < 800) {
+              crossCount = 2;
+            }
+            
+            final itemWidth = (constraints.maxWidth - (spacing * (crossCount - 1))) / crossCount - 0.1;
+
+            return Wrap(
+              spacing: spacing,
+              runSpacing: spacing,
+              children: [
+                SizedBox(
+                  width: itemWidth,
+                  child: const StatCard(
+                    value: '4+',
+                    label: 'Years\nExperience',
+                    icon: Icons.calendar_today_rounded,
+                  ),
+                ),
+                SizedBox(
+                  width: itemWidth,
+                  child: const StatCard(
+                    value: '10+',
+                    label: 'Apps\nShipped',
+                    icon: Icons.rocket_launch_rounded,
+                  ),
+                ),
+                SizedBox(
+                  width: itemWidth,
+                  child: const StatCard(
+                    value: '5',
+                    label: 'Companies\nWorked',
+                    icon: Icons.business_rounded,
+                  ),
+                ),
+                SizedBox(
+                  width: itemWidth,
+                  child: const StatCard(
+                    value: '20+',
+                    label: 'Open Source\nRepos',
+                    icon: Icons.code_rounded,
+                  ),
+                ),
+              ],
+            );
+          },
         ),
 
         const SizedBox(height: AppDimensions.xl),
@@ -196,7 +224,7 @@ class AboutSection extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: AppColors.primary.withOpacity(0.12),
+                  color: AppColors.primary.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(AppDimensions.radiusMd),
                 ),
                 child: const Icon(Icons.school_rounded,

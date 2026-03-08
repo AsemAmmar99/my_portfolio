@@ -87,18 +87,19 @@ class _SkillCategoryCardState extends State<_SkillCategoryCard> {
       onExit: (_) => setState(() => _hovered = false),
       child: AnimatedContainer(
         duration: AppDimensions.animNormal,
-        padding: const EdgeInsets.all(AppDimensions.xl),
+        padding: EdgeInsets.all(
+            MediaQuery.of(context).size.width < 600 ? 20 : AppDimensions.xl),
         decoration: BoxDecoration(
           color: _hovered ? (Theme.of(context).brightness == Brightness.dark ? AppColors.bgCardHover : AppColors.lightBgCardHover) : (Theme.of(context).brightness == Brightness.dark ? AppColors.bgCard : AppColors.lightBgCard),
           borderRadius: BorderRadius.circular(AppDimensions.radiusLg),
           border: Border.all(
-            color: _hovered ? _accent.withOpacity(0.4) : AppColors.bgBorder,
+            color: _hovered ? _accent.withValues(alpha: 0.4) : AppColors.bgBorder,
             width: 1,
           ),
           boxShadow: _hovered
               ? [
                   BoxShadow(
-                    color: _accent.withOpacity(0.12),
+                    color: _accent.withValues(alpha: 0.12),
                     blurRadius: 32,
                     offset: const Offset(0, 8),
                   ),
@@ -115,10 +116,10 @@ class _SkillCategoryCardState extends State<_SkillCategoryCard> {
                   width: 48,
                   height: 48,
                   decoration: BoxDecoration(
-                    color: _accent.withOpacity(0.12),
+                    color: _accent.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(AppDimensions.radiusMd),
                     border:
-                        Border.all(color: _accent.withOpacity(0.3), width: 1),
+                        Border.all(color: _accent.withValues(alpha: 0.3), width: 1),
                   ),
                   child: Center(
                     child: Text(
@@ -233,7 +234,7 @@ class _SkillBarState extends State<_SkillBar>
                     borderRadius: BorderRadius.circular(3),
                     gradient: LinearGradient(
                       colors: [
-                        widget.accentColor.withOpacity(0.7),
+                        widget.accentColor.withValues(alpha: 0.7),
                         widget.accentColor,
                       ],
                     ),

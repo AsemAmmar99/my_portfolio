@@ -2,7 +2,7 @@
 import 'package:visibility_detector/visibility_detector.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_dimensions.dart';
-import 'common_widgets.dart';
+
 
 /// Base wrapper for sections with scroll-triggered entrance animation
 class AnimatedSection extends StatefulWidget {
@@ -102,9 +102,14 @@ class SectionHeader extends StatelessWidget {
               ),
             ),
             const SizedBox(width: AppDimensions.md),
-            Text(
-              title,
-              style: Theme.of(context).textTheme.headlineLarge,
+            Expanded(
+              child: Text(
+                title,
+                style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                      fontSize:
+                          MediaQuery.of(context).size.width < 600 ? 28 : null,
+                    ),
+              ),
             ),
           ],
         ),
@@ -151,7 +156,8 @@ class _StatCardState extends State<StatCard> {
       onExit: (_) => setState(() => _hovered = false),
       child: AnimatedContainer(
         duration: AppDimensions.animFast,
-        padding: const EdgeInsets.all(AppDimensions.lg),
+        padding: EdgeInsets.all(
+            MediaQuery.of(context).size.width < 600 ? 16 : 24), // lg is roughly 24
         decoration: BoxDecoration(
           color: _hovered ? (Theme.of(context).brightness == Brightness.dark ? AppColors.bgCardHover : AppColors.lightBgCardHover) : (Theme.of(context).brightness == Brightness.dark ? AppColors.bgCard : AppColors.lightBgCard),
           borderRadius: BorderRadius.circular(AppDimensions.radiusLg),
@@ -162,7 +168,7 @@ class _StatCardState extends State<StatCard> {
           boxShadow: _hovered
               ? [
                   BoxShadow(
-                    color: AppColors.primary.withOpacity(0.15),
+                    color: AppColors.primary.withValues(alpha: 0.15),
                     blurRadius: 24,
                     offset: const Offset(0, 8),
                   )
@@ -175,18 +181,21 @@ class _StatCardState extends State<StatCard> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppColors.primary.withOpacity(0.12),
+                color: AppColors.primary.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(AppDimensions.radiusMd),
               ),
               child: Icon(widget.icon, color: AppColors.primary, size: 24),
             ),
             const SizedBox(height: AppDimensions.md),
-            Text(
-              widget.value,
-              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    color: AppColors.primary,
-                    fontWeight: FontWeight.w700,
-                  ),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                widget.value,
+                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      color: AppColors.primary,
+                      fontWeight: FontWeight.w700,
+                    ),
+              ),
             ),
             const SizedBox(height: AppDimensions.xs),
             Text(

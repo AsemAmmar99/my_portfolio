@@ -5,7 +5,6 @@ import '../../../core/constants/app_constants.dart';
 import '../../../core/constants/app_dimensions.dart';
 import '../../blocs/navigation/navigation_bloc.dart';
 import '../../blocs/theme/theme_bloc.dart';
-import '../common/common_widgets.dart';
 
 class PortfolioNavBar extends StatelessWidget {
   final List<GlobalKey> sectionKeys;
@@ -38,7 +37,7 @@ class PortfolioNavBar extends StatelessWidget {
           duration: AppDimensions.animNormal,
           height: AppDimensions.navBarHeight,
           decoration: BoxDecoration(
-            color: navState.isScrolled ? Theme.of(context).scaffoldBackgroundColor.withOpacity(0.95) : Colors.transparent,
+            color: navState.isScrolled ? Theme.of(context).scaffoldBackgroundColor.withValues(alpha: 0.95) : Colors.transparent,
             border: Border(
               bottom: BorderSide(
                 color: navState.isScrolled
@@ -50,7 +49,7 @@ class PortfolioNavBar extends StatelessWidget {
             boxShadow: navState.isScrolled
                 ? [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
+                      color: Colors.black.withValues(alpha: 0.2),
                       blurRadius: 20,
                     )
                   ]
@@ -72,7 +71,7 @@ class PortfolioNavBar extends StatelessWidget {
                     const Spacer(),
 
                     // â”€â”€ Theme Toggle + Nav Links (Desktop) or Hamburger â”€â”€â”€â”€â”€
-                    _ThemeToggleButton(),
+                    const _ThemeToggleButton(),
                     const SizedBox(width: AppDimensions.sm),
                     if (isDesktop)
                       _DesktopNavLinks(
@@ -150,12 +149,12 @@ class _ThemeToggleButtonState extends State<_ThemeToggleButton>
             height: 40,
             decoration: BoxDecoration(
               color: _hovered
-                  ? AppColors.primary.withOpacity(0.12)
+                  ? AppColors.primary.withValues(alpha: 0.12)
                   : Colors.transparent,
               borderRadius: BorderRadius.circular(AppDimensions.radiusMd),
               border: Border.all(
                 color: _hovered
-                    ? AppColors.primary.withOpacity(0.4)
+                    ? AppColors.primary.withValues(alpha: 0.4)
                     : Colors.transparent,
               ),
             ),
@@ -336,6 +335,7 @@ class _MobileMenuButton extends StatelessWidget {
   void _showMobileDrawer(BuildContext context) {
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       backgroundColor: AppColors.bgSecondary,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
@@ -357,40 +357,44 @@ class _MobileDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            width: 40,
-            height: 4,
-            margin: const EdgeInsets.only(bottom: 24),
-            decoration: BoxDecoration(
-              color: AppColors.bgBorder,
-              borderRadius: BorderRadius.circular(2),
-            ),
-          ),
-          ...List.generate(
-            AppConstants.navSections.length,
-            (i) => ListTile(
-              title: Text(
-                AppConstants.navSections[i],
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              leading: Container(
-                width: 8,
-                height: 8,
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 40,
+                height: 4,
+                margin: const EdgeInsets.only(bottom: 24),
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.primary,
+                  color: AppColors.bgBorder,
+                  borderRadius: BorderRadius.circular(2),
                 ),
               ),
-              onTap: () => onScrollTo(i),
-            ),
+              ...List.generate(
+                AppConstants.navSections.length,
+                (i) => ListTile(
+                  title: Text(
+                    AppConstants.navSections[i],
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  leading: Container(
+                    width: 8,
+                    height: 8,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColors.primary,
+                    ),
+                  ),
+                  onTap: () => onScrollTo(i),
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
           ),
-          const SizedBox(height: 16),
-        ],
+        ),
       ),
     );
   }
