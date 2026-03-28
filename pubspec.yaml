@@ -66,9 +66,9 @@ flutter:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/images/app_icon.jpg"
+  image_path: "assets/images/Gemini_Generated_Image_vzwhn2vzwhn2vzwh.png"
   web:
     generate: true
-    image_path: "assets/images/app_icon.jpg"
+    image_path: "assets/images/Gemini_Generated_Image_vzwhn2vzwhn2vzwh.png"
     background_color: "#ffffff"
     theme_color: "#ffffff"
