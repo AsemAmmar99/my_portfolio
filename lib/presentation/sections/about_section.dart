@@ -82,7 +82,7 @@ class AboutSection extends StatelessWidget {
             ),
             child: ClipOval(
               child: Image.asset(
-                'assets/images/profile_photo.jpg',
+                'assets/images/profile_photo.png',
                 fit: BoxFit.cover,
               ),
             ),
