@@ -83735,7 +83735,7 @@ H(a){var s=this,r=null,q=A.bj(a,r,t.w).w,p=A.R(a),o=t.p
 q=q.a.a<600?A.ce(A.c([s.Lp(a),B.bl,s.Lo(a)],o),B.L,B.v,B.y):A.cO(A.c([A.ha(s.Lp(a),2),B.zx,A.ha(s.Lo(a),3)],o),B.Y,B.v,B.y,0)
 return A.c7(r,A.xC(new A.db("about",A.ce(A.c([new A.n_("About Me","A little about my journey and passion for mobile development.",r),q],o),B.Y,B.v,B.y),B.A,r)),B.t,p.ax.k2,r,r,r,r,r,new A.aj(0,100,0,100),r,r,r)},
 Lp(a){var s,r,q=null,p=A.dZ(B.c5,3),o=A.c([new A.cl(0,B.aY,B.m.ei(0.3),B.dW,24)],t.E)
-p=A.c7(q,new A.J1(new A.td(A.aKK(q,q,new A.wV("assets/images/profile_photo.jpg",q,q)),B.Be,q),q),B.t,q,q,new A.be(q,q,p,q,o,q,B.cN),q,120,q,q,q,q,120)
+p=A.c7(q,new A.J1(new A.td(A.aKK(q,q,new A.wV("assets/images/profile_photo.png",q,q)),B.Be,q),q),B.t,q,q,new A.be(q,q,p,q,o,q,B.cN),q,120,q,q,q,q,120)
 o=A.bd("Asem El-Sayed Ammar",q,q,q,A.R(a).ok.r,B.dd,q)
 s=A.R(a).ok.z
 r=t.p
