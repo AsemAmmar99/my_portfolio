@@ -52,5 +52,5 @@ abstract class AppConstants {
 
   // ── Resume Link ───────────────────────────────────────────────────────────
   static const String resumeUrl =
-      'https://drive.google.com/file/d/1iIihaR89hrqfWaD2_z37zKWXQIneQFwH/view';
+      'https://drive.google.com/file/d/1sZI4dJZnLhmZZ3SPDv1Pa1VX4MrhrFae/view';
 }
