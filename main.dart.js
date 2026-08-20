@@ -11435,7 +11435,7 @@ case 4:s=l.a
 s===$&&A.a()
 s=A.bk(s,200)
 r=A.bk(A.a22(l,B.oP,B.Ix),24)
-q=A.bk(A.a22(l,B.oP,B.Jf),32)
+q=A.bk(A.a22(l,B.oP,B.Jg),32)
 p=A.bk(l.a,10)
 o=A.bk(l.a,12)
 l.d===$&&A.a()
@@ -47815,7 +47815,7 @@ A.vk.prototype={
 I(){return"_CornerId."+this.b}}
 A.lA.prototype={}
 A.tQ.prototype={
-kC(){var s,r,q,p=this,o=A.aRn(B.Jc,new A.a9a(p,p.b.gb0().T(0,p.a.gb0()))),n=p.a
+kC(){var s,r,q,p=this,o=A.aRn(B.Jd,new A.a9a(p,p.b.gb0().T(0,p.a.gb0()))),n=p.a
 n.toString
 s=o.a
 r=p.oE(n,s)
@@ -85137,7 +85137,7 @@ vc(){var s=0,r=A.O(t.Ue),q
 var $async$vc=A.P(function(a,b){if(a===1)return A.L(b,r)
 for(;;)switch(s){case 0:s=3
 return A.I(A.iA(B.bD,null,t.z),$async$vc)
-case 3:q=B.Jh
+case 3:q=B.Jc
 s=1
 break
 case 1:return A.M(q,r)}})
@@ -85650,7 +85650,7 @@ A.alO.prototype={
 $2(a,b){var s=null,r=A.S(this.b),q=this.a.e
 q===$&&A.a()
 q=A.ayP(B.B_,B.AZ,q.gp())
-return A.ce(s,s,B.r,s,s,new A.bj(s,s,s,s,s,new A.jO(q,1.4,B.b4,s,0,r.ax.a===B.S?B.HF:B.K3,B.Jd,s),B.F),s,s,s,s,s,s,s)},
+return A.ce(s,s,B.r,s,s,new A.bj(s,s,s,s,s,new A.jO(q,1.4,B.b4,s,0,r.ax.a===B.S?B.HF:B.K3,B.Je,s),B.F),s,s,s,s,s,s,s)},
 $S:208}
 A.alP.prototype={
 $2(a,b){var s=null,r=this.a.e
@@ -90630,10 +90630,10 @@ B.Hv=new A.pm(1,"titleHeight")
 B.Hw=new A.pm(2,"top")
 B.oJ=new A.pm(3,"center")
 B.Hx=new A.pm(4,"bottom")
-B.Je=s([1373.2198709594231,-1100.4251190754821,-7.278681089101213],t.n)
+B.Jf=s([1373.2198709594231,-1100.4251190754821,-7.278681089101213],t.n)
 B.IW=s([-271.815969077903,559.6580465940733,-32.46047482791194],t.n)
 B.Kd=s([1.9622899599665666,-57.173814538844006,308.7233197812385],t.n)
-B.HA=s([B.Je,B.IW,B.Kd],t.zg)
+B.HA=s([B.Jf,B.IW,B.Kd],t.zg)
 B.oK=s(["text","multiline","number","phone","datetime","emailAddress","url","visiblePassword","name","address","none","webSearch","twitter"],t.s)
 B.HF=s([B.ng,B.dv,B.dv],t.e)
 B.I_=s([4,9,14,19],t.t)
@@ -90788,6 +90788,24 @@ B.ee=new A.j9(3,"trailing")
 B.J7=s([B.cI,B.by,B.cJ,B.ee],A.ai("w<j9>"))
 B.bo=new A.f9(1,"fuchsia")
 B.Jb=s([B.am,B.bo,B.K,B.bd,B.aI,B.be],A.ai("w<f9>"))
+B.IJ=s(["Flutter","BLoC","Clean Architecture","GraphQL","Firebase","FCM"],t.s)
+B.Oc=new A.ep("elkheta","Elkheta \u2014 \u0627\u0644\u062a\u0639\u0644\u064a\u0645 \u0627\u0644\u0630\u0643\u064a","Innovative educational platform for students across Egypt and the Arab world. Built and maintained multiple feature modules with high performance. Integrated deep linking, FCM notifications, and offline caching.",B.IJ,"https://play.google.com/store/apps/details?id=com.elkheta",null,!0)
+B.IA=s(["Flutter","Cubit","Clean Architecture","WebSockets","Google Maps"],t.s)
+B.Ob=new A.ep("al_ouf","AL OUF \u2014 Ride-Hailing Ecosystem","Comprehensive real-time ride-hailing and delivery ecosystem. Engineered with complex real-time tracking, WebSockets, and background location syncing for seamless rider-driver connectivity.",B.IA,"https://play.google.com/store/apps/details?id=com.ment.alauf.rider","https://apps.apple.com/us/app/al-ouf/id6757753956",!0)
+B.JD=s(["Flutter","Riverpod","Clean Architecture"],t.s)
+B.O7=new A.ep("epi_aid","EPI-AID \u2014 GSK Healthcare","Specialized healthcare application developed for GSK. Features highly secure data handling and predictable state management, meeting rigorous medical and pharmaceutical sector standards.",B.JD,"https://play.google.com/store/apps/details?id=com.techbeez.epi_aid","https://apps.apple.com/eg/app/epi-aid/id6479019153?l=ar&platform=watch",!0)
+B.JQ=s(["React Native","Cross-Platform"],t.s)
+B.Oe=new A.ep("pepwell_eg","PepWell EG \u2014 Pepsi Corporate","Tailored mobile solution developed exclusively for Pepsi. Focused on delivering a fluid, high-performance user interface while ensuring strict enterprise-level compliance.",B.JQ,"https://play.google.com/store/apps/details?id=com.pepwell",null,!0)
+B.K8=s(["Flutter","BLoC","REST API","Firebase Auth","GetIt"],t.s)
+B.Od=new A.ep("benefex","BenefEx \u2014 Employee Benefits","Corporate benefits and promotions platform connecting employees with exclusive offers. Features secure authentication, push notifications, and a rich browsable catalog of company perks.",B.K8,"https://play.google.com/store/apps/details?id=com.bluecrunch.benefex",null,!0)
+B.JY=s(["Flutter","Cubit","Clean Architecture","WebSockets"],t.s)
+B.Oa=new A.ep("al_ouf_driver","AL OUF Driver \u2014 Partner App","The dedicated driver application for the AL OUF ecosystem. Features optimized background execution, real-time location streaming, and robust state management for a flawless driver experience.",B.JY,"https://play.google.com/store/apps/details?id=com.ment.alauf.driver","https://apps.apple.com/us/app/al-ouf-driver/id6754535640",!1)
+B.oR=s(["Flutter","Cubit","Clean Architecture"],t.s)
+B.O6=new A.ep("real_deal","Real Deal \u2014 B2B & B2C Platform","Robust dual-app platform connecting merchants with clients. Architected to handle complex business logic, large-scale data sets, and secure transactions efficiently.",B.oR,"https://play.google.com/store/apps/details?id=com.mentmena.realdeal_client","https://apps.apple.com/eg/app/real-deal-egypt/id6754966163",!1)
+B.O9=new A.ep("edge_innovation","EDGE \u2014 Innovation Center","Elegant and high-performing application representing a premium innovation hub. Designed with a focus on delivering a pixel-perfect UI, smooth animations, and solid performance.",B.oR,"https://play.google.com/store/apps/details?id=com.ment.edge","https://apps.apple.com/us/app/edge-innovation-center/id6759037991",!1)
+B.JI=s(["Flutter","BLoC","Google Maps","Payment SDK","Dio"],t.s)
+B.O8=new A.ep("hpadel","HPadel \u2014 Court Booking","Padel court reservation app with real-time slot availability, in-app payments, and court location mapping. Published across Google Play and App Store.",B.JI,"https://play.google.com/store/apps/details?id=com.apessmartsolutions.hpadelapp","https://apps.apple.com/eg/app/hpadel/id6450797965",!1)
+B.Jc=s([B.Oc,B.Ob,B.O7,B.Oe,B.Od,B.Oa,B.O6,B.O9,B.O8],A.ai("w<ep>"))
 B.Av=new A.vk(0,"topLeft")
 B.Ay=new A.vk(3,"bottomRight")
 B.YF=new A.lA(B.Av,B.Ay)
@@ -90796,27 +90814,9 @@ B.Aw=new A.vk(1,"topRight")
 B.Ax=new A.vk(2,"bottomLeft")
 B.YG=new A.lA(B.Aw,B.Ax)
 B.YH=new A.lA(B.Ax,B.Aw)
-B.Jc=s([B.YF,B.YI,B.YG,B.YH],A.ai("w<lA>"))
-B.Jd=s([0,0.55,1],t.n)
-B.Jf=s([35,30,20,25,30,35,30,25,25],t.n)
-B.IJ=s(["Flutter","BLoC","Clean Architecture","GraphQL","Firebase","FCM"],t.s)
-B.Oa=new A.ep("elkheta","Elkheta \u2014 \u0627\u0644\u062a\u0639\u0644\u064a\u0645 \u0627\u0644\u0630\u0643\u064a","Innovative educational platform for students across Egypt and the Arab world. Built and maintained multiple feature modules with high performance. Integrated deep linking, FCM notifications, and offline caching.",B.IJ,"https://play.google.com/store/apps/details?id=com.elkheta",null,!0)
-B.IA=s(["Flutter","Cubit","Clean Architecture","WebSockets","Google Maps"],t.s)
-B.O6=new A.ep("al_ouf","AL OUF \u2014 Ride-Hailing Ecosystem","Comprehensive real-time ride-hailing and delivery ecosystem. Engineered with complex real-time tracking, WebSockets, and background location syncing for seamless rider-driver connectivity.",B.IA,"https://play.google.com/store/apps/details?id=com.alouf.rider","https://apps.apple.com/app/al-ouf/id6400000001",!0)
-B.JD=s(["Flutter","Riverpod","Clean Architecture"],t.s)
-B.Ob=new A.ep("epi_aid","EPI-AID \u2014 GSK Healthcare","Specialized healthcare application developed for GSK. Features highly secure data handling and predictable state management, meeting rigorous medical and pharmaceutical sector standards.",B.JD,"https://play.google.com/store/apps/details?id=com.gsk.epiaid","https://apps.apple.com/app/epi-aid/id6400000004",!0)
-B.JQ=s(["React Native","Cross-Platform"],t.s)
-B.O7=new A.ep("pepwell_eg","PepWell EG \u2014 Pepsi Corporate","Tailored mobile solution developed exclusively for Pepsi. Focused on delivering a fluid, high-performance user interface while ensuring strict enterprise-level compliance.",B.JQ,"https://play.google.com/store/apps/details?id=com.pepsi.pepwell",null,!0)
-B.K8=s(["Flutter","BLoC","REST API","Firebase Auth","GetIt"],t.s)
-B.Oc=new A.ep("benefex","BenefEx \u2014 Employee Benefits","Corporate benefits and promotions platform connecting employees with exclusive offers. Features secure authentication, push notifications, and a rich browsable catalog of company perks.",B.K8,"https://play.google.com/store/apps/details?id=com.bluecrunch.benefex",null,!0)
-B.JY=s(["Flutter","Cubit","Clean Architecture","WebSockets"],t.s)
-B.Oe=new A.ep("al_ouf_driver","AL OUF Driver \u2014 Partner App","The dedicated driver application for the AL OUF ecosystem. Features optimized background execution, real-time location streaming, and robust state management for a flawless driver experience.",B.JY,"https://play.google.com/store/apps/details?id=com.alouf.driver","https://apps.apple.com/app/al-ouf-driver/id6400000002",!1)
-B.oR=s(["Flutter","Cubit","Clean Architecture"],t.s)
-B.O9=new A.ep("real_deal","Real Deal \u2014 B2B & B2C Platform","Robust dual-app platform connecting merchants with clients. Architected to handle complex business logic, large-scale data sets, and secure transactions efficiently.",B.oR,"https://play.google.com/store/apps/details?id=com.realdeal.app","https://apps.apple.com/app/real-deal/id6400000003",!1)
-B.Od=new A.ep("edge_innovation","EDGE \u2014 Innovation Center","Elegant and high-performing application representing a premium innovation hub. Designed with a focus on delivering a pixel-perfect UI, smooth animations, and solid performance.",B.oR,"https://play.google.com/store/apps/details?id=com.edge.innovation","https://apps.apple.com/app/edge-innovation/id6400000006",!1)
-B.JI=s(["Flutter","BLoC","Google Maps","Payment SDK","Dio"],t.s)
-B.O8=new A.ep("hpadel","HPadel \u2014 Court Booking","Padel court reservation app with real-time slot availability, in-app payments, and court location mapping. Published across Google Play and App Store.",B.JI,"https://play.google.com/store/apps/details?id=com.apessmartsolutions.hpadelapp","https://apps.apple.com/eg/app/hpadel/id6450797965",!1)
-B.Jh=s([B.Oa,B.O6,B.Ob,B.O7,B.Oc,B.Oe,B.O9,B.Od,B.O8],A.ai("w<ep>"))
+B.Jd=s([B.YF,B.YI,B.YG,B.YH],A.ai("w<lA>"))
+B.Je=s([0,0.55,1],t.n)
+B.Jg=s([35,30,20,25,30,35,30,25,25],t.n)
 B.Jj=s(["click","scroll"],t.s)
 B.BK=new A.rt()
 B.ii=new A.Oh(1,"page")
@@ -91481,7 +91481,7 @@ B.IP=s([B.bF,null,null,B.d4],t.L)
 B.K0=s([B.bX,null,null,B.d5],t.L)
 B.JM=s([B.kX,null,null,B.l3],t.L)
 B.Il=s([B.f1,B.f1,B.hY,null],t.L)
-B.Jg=s([B.aY,null,null,B.d1],t.L)
+B.Jh=s([B.aY,null,null,B.d1],t.L)
 B.IQ=s([B.cZ,null,null,B.f4],t.L)
 B.Id=s([B.hU,null,null,B.l1],t.L)
 B.IR=s([B.d_,null,null,B.f6],t.L)
@@ -91490,7 +91490,7 @@ B.Im=s([B.f3,B.f3,B.i_,null],t.L)
 B.IS=s([B.eZ,null,null,B.f5],t.L)
 B.Jn=s([B.f_,null,null,B.f7],t.L)
 B.In=s([B.cB,B.cB,B.d0,null],t.L)
-B.LU=new A.dC(["*",B.I8,"+",B.JF,"-",B.IG,".",B.J6,"/",B.Hy,"0",B.JU,"1",B.JP,"2",B.Ih,"3",B.K1,"4",B.JO,"5",B.If,"6",B.HC,"7",B.Ir,"8",B.JG,"9",B.JJ,"Alt",B.Ik,"AltGraph",B.JV,"ArrowDown",B.IN,"ArrowLeft",B.IO,"ArrowRight",B.IP,"ArrowUp",B.K0,"Clear",B.JM,"Control",B.Il,"Delete",B.Jg,"End",B.IQ,"Enter",B.Id,"Home",B.IR,"Insert",B.JN,"Meta",B.Im,"PageDown",B.IS,"PageUp",B.Jn,"Shift",B.In],A.ai("dC<u,R<f?>>"))
+B.LU=new A.dC(["*",B.I8,"+",B.JF,"-",B.IG,".",B.J6,"/",B.Hy,"0",B.JU,"1",B.JP,"2",B.Ih,"3",B.K1,"4",B.JO,"5",B.If,"6",B.HC,"7",B.Ir,"8",B.JG,"9",B.JJ,"Alt",B.Ik,"AltGraph",B.JV,"ArrowDown",B.IN,"ArrowLeft",B.IO,"ArrowRight",B.IP,"ArrowUp",B.K0,"Clear",B.JM,"Control",B.Il,"Delete",B.Jh,"End",B.IQ,"Enter",B.Id,"Home",B.IR,"Insert",B.JN,"Meta",B.Im,"PageDown",B.IS,"PageUp",B.Jn,"Shift",B.In],A.ai("dC<u,R<f?>>"))
 B.Ms={KeyA:0,KeyB:1,KeyC:2,KeyD:3,KeyE:4,KeyF:5,KeyG:6,KeyH:7,KeyI:8,KeyJ:9,KeyK:10,KeyL:11,KeyM:12,KeyN:13,KeyO:14,KeyP:15,KeyQ:16,KeyR:17,KeyS:18,KeyT:19,KeyU:20,KeyV:21,KeyW:22,KeyX:23,KeyY:24,KeyZ:25,Digit1:26,Digit2:27,Digit3:28,Digit4:29,Digit5:30,Digit6:31,Digit7:32,Digit8:33,Digit9:34,Digit0:35,Minus:36,Equal:37,BracketLeft:38,BracketRight:39,Backslash:40,Semicolon:41,Quote:42,Backquote:43,Comma:44,Period:45,Slash:46}
 B.v_=new A.bJ(B.Ms,["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","-","=","[","]","\\",";","'","`",",",".","/"],t.li)
 B.Mr={"zh-Hant":0,"zh-TW":1,"zh-MO":2,"zh-HK":3,ja:4,ko:5,zh:6,"zh-Hans":7,"zh-CN":8}
