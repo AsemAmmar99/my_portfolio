@@ -187,8 +187,8 @@ class _ProjectCardState extends State<_ProjectCard> {
       onExit: (_) => setState(() => _hovered = false),
       child: AnimatedContainer(
         duration: AppDimensions.animNormal,
-        transform: Matrix4.identity()
-          ..translate(0.0, _hovered ? -6.0 : 0.0),
+        transform:
+            Matrix4.translationValues(0.0, _hovered ? -6.0 : 0.0, 0.0),
         transformAlignment: Alignment.center,
         decoration: BoxDecoration(
           color: _hovered ? (Theme.of(context).brightness == Brightness.dark ? AppColors.bgCardHover : AppColors.lightBgCardHover) : (Theme.of(context).brightness == Brightness.dark ? AppColors.bgCard : AppColors.lightBgCard),
@@ -200,14 +200,14 @@ class _ProjectCardState extends State<_ProjectCard> {
           boxShadow: _hovered
               ? [
                   BoxShadow(
-                    color: AppColors.primary.withOpacity(0.15),
+                    color: AppColors.primary.withValues(alpha: 0.15),
                     blurRadius: 32,
                     offset: const Offset(0, 12),
                   ),
                 ]
               : [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
+                    color: Colors.black.withValues(alpha: 0.2),
                     blurRadius: 8,
                     offset: const Offset(0, 4),
                   ),
@@ -253,11 +253,11 @@ class _ProjectCardState extends State<_ProjectCard> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 10, vertical: 3),
                         decoration: BoxDecoration(
-                          color: AppColors.warning.withOpacity(0.15),
+                          color: AppColors.warning.withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(
                               AppDimensions.radiusFull),
                           border: Border.all(
-                              color: AppColors.warning.withOpacity(0.4)),
+                              color: AppColors.warning.withValues(alpha: 0.4)),
                         ),
                         child: Text(
                           'â­ Featured',
@@ -301,7 +301,6 @@ class _ProjectCardState extends State<_ProjectCard> {
                     spacing: 6,
                     runSpacing: 6,
                     children: p.techStack
-                        .take(4)
                         .map((t) => TechChip(label: t))
                         .toList(),
                   ),
@@ -383,10 +382,10 @@ class _CardActionState extends State<_CardAction> {
           duration: AppDimensions.animFast,
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
           decoration: BoxDecoration(
-            color: _hovered ? color.withOpacity(0.15) : Colors.transparent,
+            color: _hovered ? color.withValues(alpha: 0.15) : Colors.transparent,
             borderRadius: BorderRadius.circular(AppDimensions.radiusMd),
             border: Border.all(
-              color: _hovered ? color.withOpacity(0.4) : AppColors.bgBorder,
+              color: _hovered ? color.withValues(alpha: 0.4) : AppColors.bgBorder,
             ),
           ),
           child: Row(

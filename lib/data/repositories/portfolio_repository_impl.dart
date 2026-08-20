@@ -39,6 +39,44 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
       isFeatured: true,
     ),
     ProjectEntity(
+      id: 'al_ouf',
+      name: 'AL OUF — Ride-Hailing Ecosystem',
+      description:
+          'Comprehensive real-time ride-hailing and delivery ecosystem. '
+          'Engineered with complex real-time tracking, WebSockets, and background '
+          'location syncing for seamless rider-driver connectivity.',
+      techStack: ['Flutter', 'Cubit', 'Clean Architecture', 'WebSockets', 'Google Maps'],
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.alouf.rider',
+      appStoreUrl: 'https://apps.apple.com/app/al-ouf/id6400000001',
+      category: 'flutter',
+      isFeatured: true,
+    ),
+    ProjectEntity(
+      id: 'epi_aid',
+      name: 'EPI-AID — GSK Healthcare',
+      description:
+          'Specialized healthcare application developed for GSK. '
+          'Features highly secure data handling and predictable state management, '
+          'meeting rigorous medical and pharmaceutical sector standards.',
+      techStack: ['Flutter', 'Riverpod', 'Clean Architecture'],
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.gsk.epiaid',
+      appStoreUrl: 'https://apps.apple.com/app/epi-aid/id6400000004',
+      category: 'flutter',
+      isFeatured: true,
+    ),
+    ProjectEntity(
+      id: 'pepwell_eg',
+      name: 'PepWell EG — Pepsi Corporate',
+      description:
+          'Tailored mobile solution developed exclusively for Pepsi. '
+          'Focused on delivering a fluid, high-performance user interface '
+          'while ensuring strict enterprise-level compliance.',
+      techStack: ['React Native', 'Cross-Platform'],
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.pepsi.pepwell',
+      category: 'flutter',
+      isFeatured: true,
+    ),
+    ProjectEntity(
       id: 'benefex',
       name: 'BenefEx — Employee Benefits',
       description:
@@ -47,22 +85,47 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
           'and a rich browsable catalog of company perks.',
       techStack: ['Flutter', 'BLoC', 'REST API', 'Firebase Auth', 'GetIt'],
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.bluecrunch.benefex',
-      appStoreUrl: 'https://apps.apple.com/eg/app/benefex/id1394248863',
       category: 'flutter',
       isFeatured: true,
     ),
     ProjectEntity(
-      id: 'emart',
-      name: 'eMart — B2B Marketplace',
+      id: 'al_ouf_driver',
+      name: 'AL OUF Driver — Partner App',
       description:
-          'A B2B marketplace connecting micro, small and medium enterprises at '
-          'scale. Owned full SDK upgrade migration and performance optimization '
-          'including code refactoring for Clean Architecture compliance.',
-      techStack: ['Flutter', 'Kotlin', 'BLoC', 'Firebase', 'Crashlytics', 'CI/CD'],
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.emart.shop',
-      appStoreUrl: 'https://apps.apple.com/om/app/emart/id1614692611',
+          'The dedicated driver application for the AL OUF ecosystem. '
+          'Features optimized background execution, real-time location streaming, '
+          'and robust state management for a flawless driver experience.',
+      techStack: ['Flutter', 'Cubit', 'Clean Architecture', 'WebSockets'],
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.alouf.driver',
+      appStoreUrl: 'https://apps.apple.com/app/al-ouf-driver/id6400000002',
       category: 'flutter',
-      isFeatured: true,
+      isFeatured: false,
+    ),
+    ProjectEntity(
+      id: 'real_deal',
+      name: 'Real Deal — B2B & B2C Platform',
+      description:
+          'Robust dual-app platform connecting merchants with clients. '
+          'Architected to handle complex business logic, large-scale data sets, '
+          'and secure transactions efficiently.',
+      techStack: ['Flutter', 'Cubit', 'Clean Architecture'],
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.realdeal.app',
+      appStoreUrl: 'https://apps.apple.com/app/real-deal/id6400000003',
+      category: 'flutter',
+      isFeatured: false,
+    ),
+    ProjectEntity(
+      id: 'edge_innovation',
+      name: 'EDGE — Innovation Center',
+      description:
+          'Elegant and high-performing application representing a premium innovation hub. '
+          'Designed with a focus on delivering a pixel-perfect UI, smooth animations, '
+          'and solid performance.',
+      techStack: ['Flutter', 'Cubit', 'Clean Architecture'],
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.edge.innovation',
+      appStoreUrl: 'https://apps.apple.com/app/edge-innovation/id6400000006',
+      category: 'flutter',
+      isFeatured: false,
     ),
     ProjectEntity(
       id: 'hpadel',
@@ -75,55 +138,6 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.apessmartsolutions.hpadelapp',
       appStoreUrl: 'https://apps.apple.com/eg/app/hpadel/id6450797965',
       category: 'flutter',
-      isFeatured: false,
-    ),
-    ProjectEntity(
-      id: 'geview',
-      name: 'GeView — GSK Healthcare',
-      description:
-          'Professional healthcare app for GSK Gulf region. Designed exclusively '
-          'for healthcare professionals with secure content access, analytics, '
-          'and offline document viewing.',
-      techStack: ['Flutter', 'Clean Architecture', 'BLoC', 'Dio', 'Firebase Analytics'],
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.gsk.GSKProGulf',
-      appStoreUrl: 'https://apps.apple.com/be/app/geview/id1643973949',
-      category: 'flutter',
-      isFeatured: false,
-    ),
-    ProjectEntity(
-      id: 'weather_app',
-      name: 'Weather Forecast App',
-      description:
-          'Complex data visualization with real-time weather charts, '
-          'interactive maps, and location-based forecasting. Showcases '
-          'advanced BLoC patterns and Syncfusion Charts integration.',
-      techStack: ['Flutter', 'BLoC', 'Dio', 'Syncfusion Charts', 'Google Maps', 'Geolocator'],
-      githubUrl: 'https://github.com/AsemAmmar99/weather_app',
-      category: 'opensource',
-      isFeatured: false,
-    ),
-    ProjectEntity(
-      id: 'hotel_booking',
-      name: 'Hotel Booking App',
-      description:
-          'End-to-end hotel booking flow with dependency injection, '
-          'custom responsive layouts, and Google Maps integration. '
-          'Demonstrates enterprise-grade Flutter patterns.',
-      techStack: ['Flutter', 'BLoC', 'GetIt', 'Dio', 'Sizer', 'Google Maps'],
-      githubUrl: 'https://github.com/AsemAmmar99/Algoriza_Hotel_App_team_6',
-      category: 'opensource',
-      isFeatured: false,
-    ),
-    ProjectEntity(
-      id: 'chat_service',
-      name: 'Chat Service App',
-      description:
-          'Real-time messaging application with Firebase Authentication, '
-          'Firestore cloud database, and live message streaming. '
-          'A full-featured social chat experience.',
-      techStack: ['Flutter', 'Firebase Auth', 'Firestore', 'FCM'],
-      githubUrl: 'https://github.com/AsemAmmar99/chat_service_app',
-      category: 'opensource',
       isFeatured: false,
     ),
   ];

@@ -26,19 +26,23 @@ abstract class AppColors {
   static const Color textAccent = Color(0xFF00B4D8);
   static const Color textMuted = Color(0xFF4A5568);
 
-  // ── Light Mode ────────────────────────────────────────────────────────────
-  static const Color lightBgPrimary = Color(0xFFF4F7FB);
-  static const Color lightBgSecondary = Color(0xFFEBF0F8);
-  static const Color lightBgCard = Color(0xFFFFFFFF);
-  static const Color lightBgCardHover = Color(0xFFF0F5FF);
-  static const Color lightBgBorder = Color(0xFFD6E0F0);
+  // ── Light Mode (Shiny Purple Complementary) ───────────────────────────────
+  static const Color lightBgPrimary = Color(0xFFF5F2F9); // Soft, professional light lavender tint
+  static const Color lightBgSecondary = Color(0xFFEFEAF6); // Subtle lavender surface
+  static const Color lightBgCard = Color(0xFFFFFFFF); // Crisp white
+  static const Color lightBgCardHover = Color(0xFFFAF7FD);
+  static const Color lightBgBorder = Color(0xFFE5DEEE); // Clean, subtle border
 
-  static const Color lightGlassBg = Color(0x1400B4D8);
-  static const Color lightGlassBorder = Color(0x4000B4D8);
+  static const Color lightGlassBg = Color(0x147B2CBF);
+  static const Color lightGlassBorder = Color(0x307B2CBF);
 
-  static const Color lightTextPrimary = Color(0xFF0A1628);
-  static const Color lightTextSecondary = Color(0xFF4A5568);
-  static const Color lightTextMuted = Color(0xFF718096);
+  static const Color lightTextPrimary = Color(0xFF1A0B2E); // Deep purple-charcoal for titles
+  static const Color lightTextSecondary = Color(0xFF4A4A4A); // High-contrast readable body text
+  static const Color lightTextMuted = Color(0xFF6E6A78);
+
+  static const Color lightPrimary = Color(0xFF7B2CBF); // Rich, professional purple
+  static const Color lightPrimaryLight = Color(0xFF9D4EDD);
+  static const Color lightPrimaryDark = Color(0xFF5A189A);
 
   // ── Status ────────────────────────────────────────────────────────────────
   static const Color success = Color(0xFF38B000);

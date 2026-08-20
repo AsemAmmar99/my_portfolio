@@ -235,7 +235,7 @@ class _Footer extends StatelessWidget {
 }
 
 class _FooterSocial extends StatefulWidget {
-  final IconData icon;
+  final FaIconData icon;
   final String url;
   const _FooterSocial({required this.icon, required this.url});
 

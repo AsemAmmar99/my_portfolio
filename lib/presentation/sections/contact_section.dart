@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../core/constants/app_colors.dart';
@@ -251,7 +251,7 @@ class _ContactItem extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: AppColors.primary.withOpacity(0.1),
+            color: AppColors.primary.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(AppDimensions.radiusMd),
           ),
           child: Icon(icon, color: AppColors.primary, size: 18),
@@ -282,7 +282,7 @@ class _ContactItem extends StatelessWidget {
 }
 
 class _LinkBtn extends StatefulWidget {
-  final IconData icon;
+  final FaIconData icon;
   final String label;
   final String url;
   final Color color;
@@ -315,12 +315,12 @@ class _LinkBtnState extends State<_LinkBtn> {
               const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           decoration: BoxDecoration(
             color: _hovered
-                ? widget.color.withOpacity(0.15)
+                ? widget.color.withValues(alpha: 0.15)
                 : AppColors.bgPrimary,
             borderRadius: BorderRadius.circular(AppDimensions.radiusMd),
             border: Border.all(
                 color: _hovered
-                    ? widget.color.withOpacity(0.5)
+                    ? widget.color.withValues(alpha: 0.5)
                     : AppColors.bgBorder),
           ),
           child: Row(

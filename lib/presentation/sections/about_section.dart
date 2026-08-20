@@ -275,7 +275,7 @@ class _InfoRow extends StatelessWidget {
 }
 
 class _SmallSocialBtn extends StatefulWidget {
-  final IconData icon;
+  final FaIconData icon;
   final String url;
   const _SmallSocialBtn({required this.icon, required this.url});
 

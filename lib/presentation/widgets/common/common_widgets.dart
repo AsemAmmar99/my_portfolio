@@ -129,12 +129,12 @@ class GlassCard extends StatelessWidget {
         border: Border.all(color: cardBorder, width: 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.3 : 0.08),
+            color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.08),
             blurRadius: 24,
             offset: const Offset(0, 8),
           ),
           BoxShadow(
-            color: AppColors.primary.withOpacity(0.06),
+            color: AppColors.primary.withValues(alpha: 0.06),
             blurRadius: 40,
           ),
         ],
@@ -159,10 +159,10 @@ class TechChip extends StatelessWidget {
         vertical: AppDimensions.xs,
       ),
       decoration: BoxDecoration(
-        color: (color ?? AppColors.primary).withOpacity(0.12),
+        color: (color ?? AppColors.primary).withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(AppDimensions.radiusFull),
         border: Border.all(
-          color: (color ?? AppColors.primary).withOpacity(0.3),
+          color: (color ?? AppColors.primary).withValues(alpha: 0.3),
           width: 1,
         ),
       ),
@@ -211,7 +211,8 @@ class _GradientButtonState extends State<GradientButton> {
         onTap: widget.onTap,
         child: AnimatedContainer(
           duration: AppDimensions.animFast,
-          transform: Matrix4.identity()..scale(_hovered ? 1.04 : 1.0),
+          transform: Matrix4.diagonal3Values(
+              _hovered ? 1.04 : 1.0, _hovered ? 1.04 : 1.0, 1.0),
           transformAlignment: Alignment.center,
           padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
           decoration: widget.outlined
@@ -219,7 +220,7 @@ class _GradientButtonState extends State<GradientButton> {
                   borderRadius: BorderRadius.circular(AppDimensions.radiusMd),
                   border: Border.all(color: AppColors.primary, width: 1.5),
                   color: _hovered
-                      ? AppColors.primary.withOpacity(0.1)
+                      ? AppColors.primary.withValues(alpha: 0.1)
                       : Colors.transparent,
                 )
               : BoxDecoration(
@@ -232,7 +233,7 @@ class _GradientButtonState extends State<GradientButton> {
                   boxShadow: _hovered
                       ? [
                           BoxShadow(
-                            color: AppColors.primary.withOpacity(0.4),
+                            color: AppColors.primary.withValues(alpha: 0.4),
                             blurRadius: 20,
                             offset: const Offset(0, 8),
                           ),

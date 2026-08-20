@@ -77,8 +77,8 @@ class _TimelineItemState extends State<_TimelineItem> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    AppColors.primary.withOpacity(
-                        exp.isCurrent ? 0.6 : 0.3),
+                    AppColors.primary.withValues(
+                        alpha: exp.isCurrent ? 0.6 : 0.3),
                     AppColors.bgBorder,
                   ],
                 ),
@@ -110,7 +110,7 @@ class _TimelineItemState extends State<_TimelineItem> {
                     boxShadow: exp.isCurrent
                         ? [
                             BoxShadow(
-                              color: AppColors.primary.withOpacity(0.4),
+                              color: AppColors.primary.withValues(alpha: 0.4),
                               blurRadius: 12,
                               spreadRadius: 2,
                             )
@@ -147,7 +147,7 @@ class _TimelineItemState extends State<_TimelineItem> {
                       boxShadow: _hovered
                           ? [
                               BoxShadow(
-                                color: AppColors.primary.withOpacity(0.08),
+                                color: AppColors.primary.withValues(alpha: 0.08),
                                 blurRadius: 24,
                                 offset: const Offset(0, 4),
                               ),
@@ -210,12 +210,12 @@ class _TimelineItemState extends State<_TimelineItem> {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 10, vertical: 3),
                                     decoration: BoxDecoration(
-                                      color: AppColors.success.withOpacity(0.15),
+                                      color: AppColors.success.withValues(alpha: 0.15),
                                       borderRadius: BorderRadius.circular(
                                           AppDimensions.radiusFull),
                                       border: Border.all(
                                           color: AppColors.success
-                                              .withOpacity(0.4)),
+                                              .withValues(alpha: 0.4)),
                                     ),
                                     child: Text(
                                       'Current',

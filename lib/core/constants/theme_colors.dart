@@ -28,12 +28,14 @@ class ThemeColors {
   Color get textSecondary => isDark ? AppColors.textSecondary : AppColors.lightTextSecondary;
   Color get textMuted => isDark ? AppColors.textMuted : AppColors.lightTextMuted;
 
-  // ── Shared (same in both themes) ──────────────────────────────────────────
-  Color get accent => AppColors.primary;
-  Color get accentLight => AppColors.primaryLight;
-  Color get accentDark => AppColors.primaryDark;
+  // ── Accents ───────────────────────────────────────────────────────────────
+  Color get accent => isDark ? AppColors.primary : AppColors.lightPrimary;
+  Color get accentLight => isDark ? AppColors.primaryLight : AppColors.lightPrimaryLight;
+  Color get accentDark => isDark ? AppColors.primaryDark : AppColors.lightPrimaryDark;
   Color get success => AppColors.success;
   Color get warning => AppColors.warning;
   Color get error => AppColors.error;
-  List<Color> get primaryGradient => AppColors.primaryGradient;
+  List<Color> get primaryGradient => isDark
+      ? AppColors.primaryGradient
+      : [AppColors.lightPrimary, AppColors.lightPrimaryDark];
 }

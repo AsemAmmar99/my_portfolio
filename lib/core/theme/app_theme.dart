@@ -64,27 +64,46 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: AppColors.lightBgPrimary,
-      primaryColor: AppColors.primary,
+      scaffoldBackgroundColor: AppColors.lightBgPrimary, // Soft light lavender tint (#F5F2F9)
+      primaryColor: AppColors.lightPrimary, // Rich professional purple (#7B2CBF)
       colorScheme: const ColorScheme.light(
-        primary: AppColors.primary,
-        secondary: AppColors.secondary,
-        surface: AppColors.lightBgSecondary,
+        primary: AppColors.lightPrimary, // #7B2CBF
+        secondary: AppColors.lightPrimaryLight, // #9D4EDD
+        surface: AppColors.lightBgCard, // Crisp white (#FFFFFF)
         error: AppColors.error,
         onPrimary: Colors.white,
         onSecondary: Colors.white,
-        onSurface: AppColors.lightTextPrimary,
+        onSurface: AppColors.lightTextPrimary, // Deep purple-charcoal (#1A0B2E)
       ),
       textTheme: _buildTextTheme(
-        primary: AppColors.lightTextPrimary,
-        secondary: AppColors.lightTextSecondary,
-        muted: AppColors.lightTextMuted,
+        primary: AppColors.lightTextPrimary, // #1A0B2E
+        secondary: AppColors.lightTextSecondary, // #4A4A4A
+        muted: AppColors.lightTextMuted, // #6E6A78
       ),
-      elevatedButtonTheme: _buildElevatedButtonTheme(),
-      outlinedButtonTheme: _buildOutlinedButtonTheme(),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.lightPrimary,
+          foregroundColor: Colors.white,
+          elevation: 2,
+          shadowColor: AppColors.lightPrimary.withValues(alpha: 0.3),
+          padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          textStyle: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w600, letterSpacing: 0.5),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.lightPrimary,
+          side: const BorderSide(color: AppColors.lightPrimary, width: 1.5),
+          padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          textStyle: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w600, letterSpacing: 0.5),
+        ),
+      ),
       cardTheme: const CardThemeData(
-        color: AppColors.lightBgCard,
-        elevation: 0,
+        color: AppColors.lightBgCard, // Crisp white (#FFFFFF)
+        elevation: 2,
+        shadowColor: Color(0x141A0B2E), // Clean, subtle card shadow
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(16)),
           side: BorderSide(color: AppColors.lightBgBorder, width: 1),
@@ -98,6 +117,8 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         backgroundColor: AppColors.lightBgPrimary,
         elevation: 0,
+        iconTheme: const IconThemeData(color: AppColors.lightPrimary),
+        actionsIconTheme: const IconThemeData(color: AppColors.lightPrimary),
         titleTextStyle: GoogleFonts.poppins(
           fontSize: 20,
           fontWeight: FontWeight.w700,

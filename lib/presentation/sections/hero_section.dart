@@ -351,7 +351,7 @@ class _HeroSectionState extends State<HeroSection>
 }
 
 class _SocialLink {
-  final IconData icon;
+  final FaIconData icon;
   final String url;
   final String tooltip;
   const _SocialLink({required this.icon, required this.url, required this.tooltip});
