@@ -46,8 +46,8 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
           'Engineered with complex real-time tracking, WebSockets, and background '
           'location syncing for seamless rider-driver connectivity.',
       techStack: ['Flutter', 'Cubit', 'Clean Architecture', 'WebSockets', 'Google Maps'],
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.alouf.rider',
-      appStoreUrl: 'https://apps.apple.com/app/al-ouf/id6400000001',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ment.alauf.rider',
+      appStoreUrl: 'https://apps.apple.com/us/app/al-ouf/id6757753956',
       category: 'flutter',
       isFeatured: true,
     ),
@@ -59,8 +59,8 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
           'Features highly secure data handling and predictable state management, '
           'meeting rigorous medical and pharmaceutical sector standards.',
       techStack: ['Flutter', 'Riverpod', 'Clean Architecture'],
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.gsk.epiaid',
-      appStoreUrl: 'https://apps.apple.com/app/epi-aid/id6400000004',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.techbeez.epi_aid',
+      appStoreUrl: 'https://apps.apple.com/eg/app/epi-aid/id6479019153?l=ar&platform=watch',
       category: 'flutter',
       isFeatured: true,
     ),
@@ -72,7 +72,7 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
           'Focused on delivering a fluid, high-performance user interface '
           'while ensuring strict enterprise-level compliance.',
       techStack: ['React Native', 'Cross-Platform'],
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.pepsi.pepwell',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.pepwell',
       category: 'flutter',
       isFeatured: true,
     ),
@@ -96,8 +96,8 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
           'Features optimized background execution, real-time location streaming, '
           'and robust state management for a flawless driver experience.',
       techStack: ['Flutter', 'Cubit', 'Clean Architecture', 'WebSockets'],
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.alouf.driver',
-      appStoreUrl: 'https://apps.apple.com/app/al-ouf-driver/id6400000002',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ment.alauf.driver',
+      appStoreUrl: 'https://apps.apple.com/us/app/al-ouf-driver/id6754535640',
       category: 'flutter',
       isFeatured: false,
     ),
@@ -109,8 +109,8 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
           'Architected to handle complex business logic, large-scale data sets, '
           'and secure transactions efficiently.',
       techStack: ['Flutter', 'Cubit', 'Clean Architecture'],
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.realdeal.app',
-      appStoreUrl: 'https://apps.apple.com/app/real-deal/id6400000003',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.mentmena.realdeal_client',
+      appStoreUrl: 'https://apps.apple.com/eg/app/real-deal-egypt/id6754966163',
       category: 'flutter',
       isFeatured: false,
     ),
@@ -122,8 +122,8 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
           'Designed with a focus on delivering a pixel-perfect UI, smooth animations, '
           'and solid performance.',
       techStack: ['Flutter', 'Cubit', 'Clean Architecture'],
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.edge.innovation',
-      appStoreUrl: 'https://apps.apple.com/app/edge-innovation/id6400000006',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ment.edge',
+      appStoreUrl: 'https://apps.apple.com/us/app/edge-innovation-center/id6759037991',
       category: 'flutter',
       isFeatured: false,
     ),
